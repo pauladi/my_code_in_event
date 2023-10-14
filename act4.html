@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity4 onKeyUp Event</title>
+</head>
+<body>
+    <h1>Activity 4</h1>
+    <p>Basic Grade Transmutation</p>
+    <p>Enter your grade: <input type="number" id="numberInput" onkeyup="evaluateInput()"> </p>
+    <p>Transmuted Grade: <b id="result">---</b> </p>
+
+    <script>
+        function evaluateInput() {
+            const inputValue = parseInt(document.getElementById("numberInput").value);
+            const displayElement = document.getElementById("result");
+
+            if (inputValue >= 90) {
+                displayElement.textContent = "Excellent";
+                displayElement.style.color = "green";
+            } else if (inputValue >= 80 && inputValue <= 89) {
+                displayElement.textContent = "Average";
+                displayElement.style.color = "orange";
+            } else {
+                displayElement.textContent = "Poor";
+                displayElement.style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>

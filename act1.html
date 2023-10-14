@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity1 Click Counter</title>
+</head>
+<body>
+
+<h2> Activity 1 Demo </h2>
+
+<p id="name">Default Name: <b>Adrian Paul P. Carinoso</b></p>
+<p>Uppercase Name: <b id="upname"> Adrian Paul P. Carinoso</b></p>
+<p>Clicked: <b id="clicked"> 0</b> times</p>
+
+<button id="clickMe" onclick="transformName()">Click me</button>
+
+<script>
+    let clicked = 0;
+
+    function transformName() {
+        const nameElement = document.getElementById('upname');
+        nameElement.textContent = nameElement.textContent.toUpperCase();
+        clicked++;
+        document.getElementById('clicked').textContent = "" + clicked;
+    }
+</script>
+
+</body>
+</html>
